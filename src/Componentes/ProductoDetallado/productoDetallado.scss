@@ -1,0 +1,58 @@
+@import '../../Estilos/variables.scss';
+
+.ImagenPD {
+    width: 550px;
+    height: auto;
+    background: blue;
+
+}
+.ContenedorProductoDetalle {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.ContenedorPD2 {
+    padding: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.formatoTextoEstadoCantidad {
+    font-size: 14px;
+    color: rgb(129, 129, 129);
+}
+.superIndicePrecio {
+    font-size: 14px;
+}
+
+.formatoPrecio {
+    font-size: 30pt;
+}
+.formatoNombreProducto{
+     font-size: 20pt;
+}
+
+.botonComprar {
+    margin-top: 50px;
+    width: 250px;
+    color: white;
+    font-size: 14pt;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    background: rgb(48, 138, 255);
+    &:hover {
+        background: rgb(38, 125, 240);
+    }
+    &:active {
+        background: rgb(32, 116, 226);
+    }
+}
+
+.contenedorDescripcionProducto {
+    padding-top: 100px;
+}
+.tituloDescripcionProducto{
+    font-size: 18pt;
+}
+.textoDescripcionProducto{
+    color: rgb(155, 155, 155);
+}

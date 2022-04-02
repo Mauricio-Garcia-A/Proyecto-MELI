@@ -1,0 +1,14 @@
+@import '../../Estilos/variables.scss';
+
+.containerEncabezado{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: $colorAmarilloMeli;
+}
+.contenedorLogo{
+    padding-top: 5px;
+    padding-right: 30px;
+}
