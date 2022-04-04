@@ -1,26 +1,30 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import "./cajaDeBusqueda.scss";
 import IconoBusqueda from "../../Imagenes/ic_Search.png";
+import {Link, useSearchParams} from 'react-router-dom';
 
-export default class CajaDeBusqueda extends React.Component {
-    constructor(props){
-        super();
-        this.state = { 
-             
-         }
-    }
-    render() {
-      return (
-        <Fragment>
-            <form className='contenedorFormularioBusqueda'>
-                <input className='inputBusqueda' type="text" name="name" placeholder="Nunca dejes de buscar"/>
-                <button className='buttomBusqueda'><img src={IconoBusqueda} alt="B"/></button>
-                
-            </form>
-        </Fragment>
-      );
-    }
-};
+export default function CajaDeBusqueda(){
+  let [searchParams, setSearchParams] = useSearchParams();
+    const handleChange = (e) => {
+      let search = e.target.value;
+      if (search) {
+          setSearchParams({ search });
+      } else {
+          setSearchParams({});
+      }
+   };
+  return (
+    <div className='contenedorFormularioBusqueda'>
+      <input className='inputBusqueda' 
+        placeholder="Nunca dejes de buscar"
+        type="text"
+        value={searchParams.get("search") || ""}
+        onChange={handleChange}
+      />
+      <Link to={`/items?${searchParams}`}><div className='buttomBusqueda'><img src={IconoBusqueda} alt="B"/></div></Link>
+    </div>
+  );
+}
   
   
 
