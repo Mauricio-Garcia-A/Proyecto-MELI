@@ -1,5 +1,7 @@
+// Importación Estilos Globales
 @import '../../Estilos/variables.scss';
 
+//Estilos propios del componente
 .ImagenPD {
     width: 550px;
     height: auto;
@@ -22,7 +24,6 @@
 .superIndicePrecio {
     font-size: 14px;
 }
-
 .formatoPrecio {
     font-size: 30pt;
 }
@@ -46,7 +47,6 @@
         background: rgb(32, 116, 226);
     }
 }
-
 .contenedorDescripcionProducto {
     padding-top: 100px;
 }

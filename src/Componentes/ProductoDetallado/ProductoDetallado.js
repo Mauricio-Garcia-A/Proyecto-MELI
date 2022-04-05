@@ -1,6 +1,11 @@
 import React from 'react';
+//Dependencia de Estilos
 import "./productoDetallado.scss";
 
+/* Componente PRODUCTODETALLADO
+    Este componente recibe por props características mas especificas del producto [Titulo, Precio, Imagen, Estado, CantidadVendida, Descripcion],
+    y los muestra de una forma ordenada y determinada
+*/
 export default function ProductoDetallado(props) {
     return (
         <>
