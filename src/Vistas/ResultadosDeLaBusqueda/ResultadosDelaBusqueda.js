@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import VistaPreliminarProducto from '../../Componentes/VistaPreliminarProducto/VistaPreliminarProducto.js';
 import "./resultadosDelaBusqueda.scss";
 import { Link, useSearchParams } from 'react-router-dom';
-import { productosLista } from '../../SeviciosApi/funciones.js'
+import { productosLista, categoriasSelecionadas} from '../../SeviciosApi/funciones.js'
 import BreadCrumbs from '../../Componentes/BreadCrumbs/BreadCrumbs.js';
 
 export default function ResultadosDelaBusqueda() {
+  const [ categorias, setCategorias ] = useState([])
   const [ productos, setProductos ] = useState([])
   const [searchParams] = useSearchParams();
 
@@ -14,13 +15,15 @@ export default function ResultadosDelaBusqueda() {
       let searchParam = searchParams.get("search")
       let products = await productosLista(searchParam, 4);
       setProductos(products)
+      let categories = await categoriasSelecionadas(products[0].category_id);
+      setCategorias(categories)
     }
     buscar()
   }, [searchParams])
 
   return (
     <div>
-        <BreadCrumbs />
+        <BreadCrumbs Categorias={categorias} />
         <div className='contenedorEstandarProducto'>
             { productos.map(producto => (
                 <div> 
