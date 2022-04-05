@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Proyecto-MeLi/static/css/main.30640bee.css",
-    "main.js": "/Proyecto-MeLi/static/js/main.308e9104.js",
+    "main.css": "/Proyecto-MeLi/static/css/main.49a7e1bc.css",
+    "main.js": "/Proyecto-MeLi/static/js/main.4524932a.js",
     "index.html": "/Proyecto-MeLi/index.html",
-    "main.30640bee.css.map": "/Proyecto-MeLi/static/css/main.30640bee.css.map",
-    "main.308e9104.js.map": "/Proyecto-MeLi/static/js/main.308e9104.js.map"
+    "main.49a7e1bc.css.map": "/Proyecto-MeLi/static/css/main.49a7e1bc.css.map",
+    "main.4524932a.js.map": "/Proyecto-MeLi/static/js/main.4524932a.js.map"
   },
   "entrypoints": [
-    "static/css/main.30640bee.css",
-    "static/js/main.308e9104.js"
+    "static/css/main.49a7e1bc.css",
+    "static/js/main.4524932a.js"
   ]
 }
