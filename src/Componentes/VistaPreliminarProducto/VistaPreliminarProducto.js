@@ -9,7 +9,7 @@ export default function VistaPreliminarProducto(props) {
            <div className='contenedorVPP2'>
                 <div className='contenedorVPP3'>
                     <span className='formatoPrecio'>$ {props.Precio} </span>
-                    <span visibility={props.EnvioGratis ? "visible" :"hidden"}> <img className='iconoEnvio' src={IconoEnvio} alt="E"/> </span>    
+                    <span style={{ visibility: props.EnvioGratis ? "visible" :"hidden" }}> <img className='iconoEnvio' src={IconoEnvio} alt="E"/> </span>    
                 </div>
                 <span className='formatoTituloProducto'>{props.Titulo}</span>  
            </div>
