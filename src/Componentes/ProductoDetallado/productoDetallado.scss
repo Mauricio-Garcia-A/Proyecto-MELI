@@ -3,14 +3,20 @@
 
 //Estilos propios del componente
 .ImagenPD {
+    margin: 20px;
     width: 550px;
     height: auto;
     border-radius: 5px;
-
+    @media (max-width: 800px) {
+        width: 85%;
+    }
 }
 .ContenedorProductoDetalle {
     display: flex;
     flex-flow: row nowrap;
+    @media (max-width: 1130px) {
+        flex-flow: row wrap;
+    }
 }
 .ContenedorPD2 {
     padding: 15px;
