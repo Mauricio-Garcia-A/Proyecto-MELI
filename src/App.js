@@ -1,6 +1,5 @@
 import React from "react";
-//Paquetes Dependecias
-  import {Routes, Route} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 
 //Componentes Utilizados
   import BarraDeBusqueda from "./Componentes/BarraDeBusqueda/BarraDeBusqueda.js";
@@ -11,6 +10,7 @@ import React from "react";
 
 //Dependecia de Estilos
   import "./App.scss";
+import PieDePagina from "./Componentes/PieDePagina/PieDePagina.js";
 
 /* APP - COMPONENTE PRINCIPAL 
     En este componente establece el routeo de la aplicación, para poder navegar entre las diferentes vistas.
@@ -30,6 +30,7 @@ function App() {
           <Route path="*" element={ <Erro /> } />
         </Routes>     
       </div>
+      <PieDePagina />
     </div>
   );
 }
