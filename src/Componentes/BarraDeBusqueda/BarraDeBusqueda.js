@@ -1,17 +1,14 @@
 import React from 'react';
-//Paquetes Dependencias
 import {Link} from 'react-router-dom';
-
-//Componentes e Imagenes Utilizados 
 import CajaDeBusqueda from '../CajaDeBusqueda/CajaDeBusqueda.js';
 import Logo from "../../Imagenes/Logo_ML.png";
-
-//Dependencia de Estilos
 import "./barraDeBusqueda.scss";
 
-/* Componente BARRADEBUSQUEDA
-    Este componente cuenta con una estructura basica de un LOGO y una CAJA DE BUSQUEDA independiente.
-*/
+/* ---------------------------   Componente BARRADEBUSQUEDA  -----------------------------------------
+Este componente cuenta con una estructura basica:
+    - Un LOGO que nos redirije al HOME al hacer click en el
+    - Una CAJA DE BUSQUEDA donde se puede ingresar el keyword a buscar                                                           */
+
 export default function BarraDeBusqueda() {
     return (
         <div className='containerEncabezado contenedorApp'>
@@ -19,4 +16,4 @@ export default function BarraDeBusqueda() {
             <CajaDeBusqueda />
         </div>
     )
-}
+};
