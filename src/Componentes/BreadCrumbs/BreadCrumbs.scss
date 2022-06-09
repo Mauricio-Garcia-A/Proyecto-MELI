@@ -8,8 +8,9 @@ ul.breadcrumb {
   }
   ul.breadcrumb li {
     display: inline;
-    font-size: 18px;
+    font-size: 16px;
     color: rgb(136, 136, 136);
+    font-family: Arial, Helvetica, sans-serif;
   }
   ul.breadcrumb li+li:before {
     content: "/\00a0";

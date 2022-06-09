@@ -1,20 +1,24 @@
 import React from "react";
+import IconoPieDePagina from "./IconoPieDePagina";
 import "./PieDePagina.scss"
 
 const INFORMACION_OPCIONES = [
-    {titulo:"Acerca de Nosotros", opciones:["Info MeLi"]},
-    {titulo:"Redes Sociales", opciones:["IG: @MeLi-IG","FB: @MeLi-FB"]},
-    {titulo:"Ayuda", opciones:["Compras","Ventas","Resolucion de Problemas"]}
+    {titulo:"Acerca de Nosotros", opciones:[{titulo:'informacion', dato:"Info MeLi"}]},
+    {titulo:"Redes Sociales", opciones:[ {titulo:'instagram',dato:"@MeLi-IG"},
+                                         {titulo:'facebook',dato:"@MeLi-FB"}]},
+    {titulo:"Ayuda", opciones:[ {titulo:'compras',dato:"Compras"}, 
+                                {titulo:'ventas',dato:"Ventas"},
+                                {titulo:'problemas',dato:"Resolucion de Problemas"}]}
 ]
 
 export default function PieDePagina() {
 
     function ItemDeInformacion(props){
         return(
-            <div key={props.id} className="itemsDeInformacion">
+            <div className="itemsDeInformacion">
                 <b>{props.title}</b><br/>
                 {props.links.map((lk, e)=>{
-                    return(<div key={"lk"+e} ><a className="textLinks" href="/#">{lk}</a></div>)})}
+                    return(<div key={"lk"+e} className='contenedorLinkPDP'> <IconoPieDePagina className='estiloIconoPieDePagina' titulo={lk.titulo} fill='#929295' width='17px'height='auto' /> <a className="textLinks" href="/#">{lk.dato}</a></div>)})}
                 
             </div>  
         )
@@ -25,7 +29,7 @@ export default function PieDePagina() {
             <div className="containerOpcionesPieDePagina contenedorApp">
                 {INFORMACION_OPCIONES.map((opcion,i)=>{ 
                     return(
-                        <ItemDeInformacion title={opcion.titulo} links={opcion.opciones} id={"op"+i}/>
+                        <ItemDeInformacion title={opcion.titulo} links={opcion.opciones} key={"ItemInfo"+i}/>
                     )
                 })}                
             </div>

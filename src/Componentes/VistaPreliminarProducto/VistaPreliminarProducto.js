@@ -12,7 +12,7 @@ import "./vistaPreliminarProducto.scss";
 export default function VistaPreliminarProducto(props) {
     return (
         <div className='contenedorVistaPreliminarProducto'>
-           <div><img  className='imagenPreliminarPrducto' src={props.Imagen} alt="img"/></div>
+           <><div  className='ContenedorImagenPreliminarPrducto'><img  className='imagenPreliminarPrducto' src={props.Imagen} alt="img"/></div></>
            <div className='contenedorVPP2'>
                 <div className='contenedorVPP3'>
                     <span className='formatoPrecio'>$ {props.Precio} </span>

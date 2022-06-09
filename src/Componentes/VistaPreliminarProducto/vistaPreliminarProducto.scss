@@ -2,11 +2,23 @@
 @import '../../Estilos/variables.scss';
 
 //Estilos propios del componente APP
-.imagenPreliminarPrducto {
+.ContenedorImagenPreliminarPrducto {
+    background: rgb(255, 255, 255);
+    min-width: 160px;
+    min-height: 160px;
     width: 160px;
     height: 160px;
     border-radius: 5px;
-
+    display: flex;
+    object-fit: cover;
+}
+.imagenPreliminarPrducto {
+    margin: auto;
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+  
+   
 }
 .contenedorVistaPreliminarProducto {
     display: flex;
@@ -25,7 +37,7 @@
     }
 }
 .contenedorVPP2{
-    width: 100%;
+    
     padding: 15px;
 }
 .contenedorVPP3 {
