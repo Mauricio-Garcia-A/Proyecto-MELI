@@ -22,10 +22,12 @@ export default function CarrucelImagenProducto({imagenes, autoPlay=false, tempor
     }
 
     const previous=()=> {
-        seleccionarSiguienteImagen(selectedIndex, imagenes, false)                          
+        seleccionarSiguienteImagen(selectedIndex, imagenes, false)
+        scrollPrositionIntoView(selectedIndex)                          
     }
     const next=()=> {
         seleccionarSiguienteImagen(selectedIndex, imagenes, true)
+        scrollPrositionIntoView(selectedIndex) 
     }
    
     const selectPosition=(index, images)=>{
@@ -42,6 +44,11 @@ export default function CarrucelImagenProducto({imagenes, autoPlay=false, tempor
         }
     })
 
+    const scrollPrositionIntoView = (id)=> {
+        const element = document.getElementById("bsi"+id);
+        element.scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"});
+    }
+
     return (
         <div className='contenedorCarrusel'>
             <div className='contenedorBotonesCarrusel'>
@@ -51,7 +58,7 @@ export default function CarrucelImagenProducto({imagenes, autoPlay=false, tempor
                 </div>
                 <div className='contenedorBotonesDeSeleccionCarrusel'>
                     {imagenes.map((imagen, i)=>{
-                            return(<button key={"bsi"+i} onClick={()=>selectPosition(i,imagenes)} className={(i===selectedIndex)?'botonSelector active':'botonSelector'} ><img src={imagen} alt='img' className='imagenMiniaturaProductoBoton' ></img> </button>)
+                            return(<button id={"bsi"+i} key={"bsi"+i} onClick={()=>selectPosition(i,imagenes)} className={(i===selectedIndex)?'botonSelector active':'botonSelector'} ><img src={imagen} alt='img' className='imagenMiniaturaProductoBoton' ></img> </button>)
                     })}
                 </div>
 

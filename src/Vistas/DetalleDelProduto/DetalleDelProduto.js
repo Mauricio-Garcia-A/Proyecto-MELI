@@ -5,6 +5,9 @@ import BreadCrumbs from '../../Componentes/BreadCrumbs/BreadCrumbs';
 import "./detalleDelProduto.scss";
 import {useDetalleProducto} from '../../Hooks/useDetalleProducto.js'
 
+/* -------------------------  Vista DETALLEDEPRODUCTO  -----------------------------
+    En esta vista se muestra las caracteristicas mas importantes de UN PRODUCTO
+*/
 
 export default function DetalleDelProducto() {
     const {id} = useParams();

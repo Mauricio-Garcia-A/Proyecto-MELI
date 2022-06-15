@@ -24,8 +24,7 @@
     height: 95px;
     
     white-space: nowrap;
-    overflow-y: hidden; 
-    overflow-x: auto;
+   overflow: auto;
                                                             /* ESTILOS DE LA BARRA DE SCROLL - NO TODOS LOS NAVEGADORES LOS ACEPTAN */
     &::-webkit-scrollbar {  
         height: 10px;                                       /* width of the entire scrollbar */

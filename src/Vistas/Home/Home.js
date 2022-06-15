@@ -5,9 +5,8 @@ import './Home.scss'
 En el componente HOME solo se mostrara el mensaje de bienvenida
 */
 export default function Home() {
-
     return (
-        <div style={{ height:'700px' }}>
+        <div style={{ height:'600px' }}>
             <h1 style={{ color:"grey"}}> Bienvenidos a Mercadolibre </h1>
         </div>
     )
