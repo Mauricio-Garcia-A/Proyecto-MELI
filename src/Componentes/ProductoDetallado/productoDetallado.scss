@@ -20,6 +20,7 @@
 }
 .ContenedorPD2 {
     padding: 15px;
+    margin-top: 75px;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -35,6 +36,7 @@
 }
 .formatoTituloProducto{
      font-size: 20pt;
+     margin-bottom: 25px;
 }
 
 .botonComprar {
@@ -61,4 +63,7 @@
 }
 .textoDescripcionProducto{
     color: rgb(155, 155, 155);
+}
+.contenedorImagenesProducto{
+    margin: auto;
 }

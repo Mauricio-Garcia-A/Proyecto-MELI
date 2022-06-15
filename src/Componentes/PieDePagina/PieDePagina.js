@@ -11,6 +11,11 @@ const INFORMACION_OPCIONES = [
                                 {titulo:'problemas',dato:"Resolucion de Problemas"}]}
 ]
 
+
+/* -----------------------------------   Componente PIEDEPAGINA  ---------------------------------------------
+    Este componente solo muestra informacion de interes que suele estar en los footers. (No fue solicitado en el CHALLENGE de MeLi - Tarea PROACTIVA)
+*/
+
 export default function PieDePagina() {
 
     function ItemDeInformacion(props){
@@ -18,8 +23,7 @@ export default function PieDePagina() {
             <div className="itemsDeInformacion">
                 <b>{props.title}</b><br/>
                 {props.links.map((lk, e)=>{
-                    return(<div key={"lk"+e} className='contenedorLinkPDP'> <IconoPieDePagina className='estiloIconoPieDePagina' titulo={lk.titulo} fill='#929295' width='17px'height='auto' /> <a className="textLinks" href="/#">{lk.dato}</a></div>)})}
-                
+                    return(<div key={"lk"+e} className='contenedorLinkPDP'> <IconoPieDePagina className='estiloIconoPieDePagina' titulo={lk.titulo} fill='#929295' width='17px' height='17px' /> <a className="textLinks" href="/#">{lk.dato}</a></div>)})}
             </div>  
         )
     }
