@@ -35,11 +35,9 @@ export function useProductos ({ keywords , limit }) {
             setLoadingNextPage(true)    
             getProductos({query:keywords, limit, page}).then(nextProductos => {
             setProductos(prevProductos => prevProductos.concat(nextProductos.items))
-            console.log(page)
              setLoadingNextPage(false)
             })
         }
-       console.log(products)
     }, [page])
 
 
