@@ -27,6 +27,7 @@ function App() {
       <div className="contenedorApp">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Proyecto-MeLi" element={<Home />} />
           <Route path={"/items"} element={ <ResultadosDelaBusqueda /> } />
           <Route path="/items/:id" element={ <DetalleDelProducto /> } />
           <Route path="*" element={ <Erro /> } />

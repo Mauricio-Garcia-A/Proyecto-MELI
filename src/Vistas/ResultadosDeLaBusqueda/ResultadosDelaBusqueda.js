@@ -6,7 +6,7 @@ import "./resultadosDelaBusqueda.scss"
 import { useProductos } from '../../Hooks/useProductos.js'
 import PlaceholderListaProductos from '../../Componentes/ItemsLoading/PlaceholderListaProductos/PlaceholderListaProductos.js'
 import ErrorBusquedaProducto from '../../Componentes/ErrorBusquedaProducto/ErrorBusquedaProducto.js'
-
+import Slider from '../../Componentes/ItemsLoading/Slider/Spinner.js'
 
 /* -------------------------  Vista RESULTADOSDELABUSQUEDDA  -----------------------------
     La vista Resultado Muestra la lista de los resultados surgidos de la búsqueda
@@ -14,13 +14,18 @@ import ErrorBusquedaProducto from '../../Componentes/ErrorBusquedaProducto/Error
 
 export default function ResultadosDelaBusqueda() {
   const [params] = useSearchParams()                                
-  let keywords = params.get("search")                                             // Recupero la palabra buscada de la url 
-  const {products, categories, loading, searchError}= useProductos({ keywords, limit:4})       // LLamada al sevicio (API) por medio de un customHook 
+  let keywords = params.get("search")                                                                                     // Recupero la palabra buscada de la url 
+  const {products, categories, loading, searchError, setPage, loadingNextPage}= useProductos({ keywords, limit:4})       // LLamada al sevicio (API) por medio de un customHook 
+
+  console.log(loadingNextPage)
+  const handlerNextPage =()=> {
+    setPage(prevPage => prevPage + 1)
+  }
 
   return (
     
     <>
-    { loading                                                                     // Si esta cargado muestra Placehoder y cuando termina de cargar muestra el Listado De Productos
+    { loading                                                                                                           // Si esta cargado muestra Placehoder y cuando termina de cargar muestra el Listado De Productos
       ?   <PlaceholderListaProductos />
       :   <>
             <BreadCrumbs Categorias={categories} />
@@ -39,8 +44,9 @@ export default function ResultadosDelaBusqueda() {
                                   <hr className='lineaDeSeparacion' />
                               </Link>
                           )) }
+                          {loadingNextPage ? <Slider />:null}
                           <div className='contenedorBotonVerMasProductos'>
-                              <button className='botonEstandar'> Ver mas Productos </button>
+                              <button className='botonEstandar' onClick={handlerNextPage}> Ver mas Productos </button>
                           </div>
                         </>
                   }

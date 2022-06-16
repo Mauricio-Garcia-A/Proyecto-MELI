@@ -13,8 +13,8 @@ export function getCategorias({category_id}) {
         .catch(error => {console.log('Error Servicio Lista de Categorias')}) 
 }
 
-export function getProductos({query, limit}) {
-    const API_URL_BUSCAR_PRODUCTOS=`${API_URL}/sites/MLA/search?q=${query}&limit=${limit}`
+export function getProductos({query, limit=4, page=0}) {
+    const API_URL_BUSCAR_PRODUCTOS=`${API_URL}/sites/MLA/search?q=${query}&limit=${limit}&offset=${limit*page}`
 
     return fetch(API_URL_BUSCAR_PRODUCTOS)                                                                       // Se hace la llamada a la API
         .then(response=>response.json())                                                                        // Se convierte la respuesta a JSON
