@@ -1,0 +1,124 @@
+@import '../../../Estilos/variables.scss';
+@import '../../ProductoDetallado/productoDetallado.scss';
+
+
+.placeholderBreadCrumbsConteiner{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row nowrap;
+    padding-bottom: 12px;
+    
+    animation-name: opacidad;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+
+@keyframes opacidad {
+    from {opacity: 1;}
+    to {opacity: 0.3;}
+  }
+
+.placeholderBreadCrumbs {
+    width: 180px;
+    height: 15px;
+    border-radius: 6px;
+    background: rgb(131, 131, 131);
+    background: rgb(182, 182, 182);
+    margin-right: 14px;
+}
+
+.placeholderTextDescription {
+    height: 9px;
+    border-radius: 6px;
+    background: rgb(131, 131, 131);
+    margin-right: 14px;
+    margin-bottom: 10px;
+    animation-name: opacidad;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+
+}
+//---- Placeholder CARRUSEL PRODUCTO
+
+.PlaceholderCarrusel {
+    border-radius: 7px;
+    border: 2px rgb(219, 219, 219) solid;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 500px;
+    max-height: 500px;
+    display: flex;
+    width:60vw;
+    height: 60vw;
+    flex-direction: column;
+    
+    animation-name: opacidad;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+.contenedorBotonesFotosCarruselPlaceholder {  //
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row nowrap; 
+    justify-content: space-around;
+}
+
+.imagenCarruselPlaceholder {
+    width: 80%;
+    height: auto;
+    background: rgb(196, 196, 196);
+    border-radius: 7px;
+    margin: 10% 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+
+}
+.botonFlechaPlaceholder {
+    color: white;
+    margin: 5px;
+    background: rgb(115, 115, 115);
+    width: 30px;
+    height: 15px;
+    border: 1px rgb(115, 115, 115) solid;
+    border-radius: 7px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    margin-top: 42%;
+
+}
+
+.contenedorBotonesDeSeleccionCarruselPlaceholder { 
+    bottom: 3px;
+    width: 75%;
+    margin-left: 10%;
+    overflow:hidden;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    
+}
+
+.botonSelectorPlaceholder {
+    display: inline-block;
+    background: rgb(180, 180, 180);
+    margin: 7px;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.imagenSelectorPlaceholder {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+

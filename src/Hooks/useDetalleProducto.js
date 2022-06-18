@@ -25,17 +25,14 @@ export function useDetalleProducto ({id}) {
             setPictures(imagenes)
             
             getCategorias({category_id:producto.categories}).then(categorias => {
-                setCategories(categorias)  })
+                setCategories(categorias)  
+            })
+            setLoadig(false)
         }) 
         getDescripcionProducto({id}).then(descripcion => {
             setDescription(descripcion)  
         })
-
-        setTimeout(()=>{
-         setLoadig(false)   
-        },500)
-        }
-    ,[id])
+    },[id])
 
     
     return {loading, product, description, categories, price, pictures}

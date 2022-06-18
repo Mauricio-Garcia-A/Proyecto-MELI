@@ -4,4 +4,10 @@
 //Estilos propios del componente APP
 .contenedorPrincipal {
     background: $colorGrisMeli;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+}
+.contenedorPieDePagina {
+    margin-top: auto;
 }

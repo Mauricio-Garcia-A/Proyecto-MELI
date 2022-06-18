@@ -33,7 +33,10 @@ function App() {
           <Route path="*" element={ <Erro /> } />
         </Routes>     
       </div>
-      <PieDePagina />
+      <footer className="contenedorPieDePagina">
+        <PieDePagina />
+      </footer>
+      
     </div>
   );
 }
