@@ -1,13 +1,21 @@
 {
   "files": {
-    "main.css": "/Proyecto-MeLi/static/css/main.393d97f9.css",
-    "main.js": "/Proyecto-MeLi/static/js/main.c56107f2.js",
+    "main.css": "/Proyecto-MeLi/static/css/main.557f2153.css",
+    "main.js": "/Proyecto-MeLi/static/js/main.326806e3.js",
+    "static/media/imag06.jpg": "/Proyecto-MeLi/static/media/imag06.d9b8043021cb466f0b3a.jpg",
+    "static/media/imag03.jpg": "/Proyecto-MeLi/static/media/imag03.1b3f54276ec40d3fb284.jpg",
+    "static/media/imag07.jpg": "/Proyecto-MeLi/static/media/imag07.8bc46828778075e61dba.jpg",
+    "static/media/imag01.jpg": "/Proyecto-MeLi/static/media/imag01.e488c6e8ee55b6943af3.jpg",
+    "static/media/imag02.jpg": "/Proyecto-MeLi/static/media/imag02.d7010a741cd9d84a84ff.jpg",
+    "static/media/imag04.jpg": "/Proyecto-MeLi/static/media/imag04.18877a75cddc693bac28.jpg",
+    "static/media/imag05.jpg": "/Proyecto-MeLi/static/media/imag05.5bb70c80876e5d241ed1.jpg",
+    "static/media/imag08.jpg": "/Proyecto-MeLi/static/media/imag08.a9d65623384b6dba3e21.jpg",
     "index.html": "/Proyecto-MeLi/index.html",
-    "main.393d97f9.css.map": "/Proyecto-MeLi/static/css/main.393d97f9.css.map",
-    "main.c56107f2.js.map": "/Proyecto-MeLi/static/js/main.c56107f2.js.map"
+    "main.557f2153.css.map": "/Proyecto-MeLi/static/css/main.557f2153.css.map",
+    "main.326806e3.js.map": "/Proyecto-MeLi/static/js/main.326806e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.393d97f9.css",
-    "static/js/main.c56107f2.js"
+    "static/css/main.557f2153.css",
+    "static/js/main.326806e3.js"
   ]
 }
