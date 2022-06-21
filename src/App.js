@@ -23,8 +23,7 @@ function App() {
   return (
     <div className="contenedorPrincipal">
       <BarraDeBusqueda />
-      <br />
-      <div className="contenedorApp">
+      <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Proyecto-MeLi" element={<Home />} />

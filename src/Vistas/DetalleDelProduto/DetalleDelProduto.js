@@ -20,7 +20,8 @@ export default function DetalleDelProducto() {
 
 
     return (
-        <> {loading 
+        <div className="contenedorApp">
+            {loading 
                 ?<PlaceholderDetalleDeProducto 
                     Titulo={product.title} 
                     Precio={price}   
@@ -40,6 +41,6 @@ export default function DetalleDelProducto() {
                 </>
             }
             
-        </>
+        </div>
     )
 }

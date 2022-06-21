@@ -65,7 +65,7 @@ export default function CarrucelImagenProducto({imagenes, autoPlay=false, tempor
             </div>
             
             <div>
-                <SliderImagen urlImagen={selectedImagen} color='yellow'/>
+                <SliderImagen urlImagen={selectedImagen}/>
             </div>
             <br />
         </div>

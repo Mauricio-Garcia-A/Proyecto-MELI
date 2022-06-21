@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom'
 */
 export default function Error() {
     return (
-        <div style={{ height:"1000px"}}>
+        <div style={{ height:"1000px"}} className="contenedorApp">
             <h1 style={{ color:"rgb(255, 42, 42)"}}> ERROR: La ruta no existe </h1>
             <Link to="/">Volver al HOME</Link>
         </div>

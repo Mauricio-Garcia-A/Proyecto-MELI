@@ -22,7 +22,7 @@ export default function ResultadosDelaBusqueda() {
   }
 
   return (
-    <>
+    <div className="contenedorApp">
     { loading                                                                                                           // Si esta cargado muestra Placehoder y cuando termina de cargar muestra el Listado De Productos
       ?   <PlaceholderListaProductos />
       :   <>
@@ -51,6 +51,6 @@ export default function ResultadosDelaBusqueda() {
               </div>              
           </>
     }
-    </>
+    </div>
   )
 }

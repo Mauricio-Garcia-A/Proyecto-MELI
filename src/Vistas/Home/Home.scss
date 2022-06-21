@@ -1,0 +1,11 @@
+// Importacion Estilos Globales
+@import '../../Estilos/variables.scss';
+
+.ContenedorTextoTituloHome {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    font-size: 25px;
+    color: rgb(136, 136, 136);
+    font-family: Arial, Helvetica, sans-serif;
+}

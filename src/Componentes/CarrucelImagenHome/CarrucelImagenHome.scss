@@ -1,0 +1,120 @@
+.contenedorCarruselHome {
+    max-height: 340px;
+    min-height: 120px;
+    height: 22vw;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+} 
+.contenedorBotonesCarruselHome {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2; 
+}
+
+.contenedorBotonesDeControlCarruselHome {
+    height: 90%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;  
+    opacity: 0;
+    transition: 1s ease all ;
+    &:hover {
+        opacity: 1;
+    }
+
+}
+.contenedorBotonesDeSeleccionCarruselHome {
+    height: 10%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0px;
+   
+
+}
+
+.botonSelectorHome {
+    background: rgb(120, 120, 120);
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 8px;
+    width: 20px;
+    height: 8px;
+    opacity: 0.7;
+    border: 1px rgb(75, 75, 75) solid;
+    border-radius: 5px;
+    &:hover {
+        border: 1px rgb(161, 161, 161) solid;
+        background: rgb(255, 255, 255);
+        opacity: 0.9;
+    }
+    &:active {
+        border: 1px rgb(165, 165, 165) solid;
+        background: rgb(208, 208, 208);
+        opacity:1;
+    }
+}
+
+.activeSelect {
+    transform: scale(1.2);
+    border: 1px rgb(68, 68, 68) solid;
+    background: rgb(255, 255, 255);
+    opacity: 1;
+}
+
+
+.sliderImagenHome {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagenCarruselHome{
+    width: auto;
+    transition: 1s ease all ;
+    opacity: 0;
+    &.loaded {
+        opacity: 1;
+    }
+}
+
+.botonDerecha {
+    border: 1px rgb(186, 186, 186) solid;
+    border-radius: 0px 40px 40px 0px;
+    padding-right: 13px;
+}
+.botonIzquierda {
+    border: 1px rgb(186, 186, 186) solid;
+    border-radius: 40px 0px 0px 40px;
+    padding-left: 13px;
+}
+
+.botonFlechaHome {
+    color: rgba(28, 28, 120, 0.67);
+    font-size: 20pt;
+    width:35px;
+    height: 70px;
+    opacity: 0.7;
+    transition: 1s ease all ;
+
+    
+    &:hover {
+        width:50px;
+        background: rgb(255, 255, 255);
+        opacity: 0.9;
+        box-shadow: 0px 0px 20px 10px #0000007c;
+    }
+    &:active {
+        background: rgba(255, 239, 183, 0.94);
+        opacity: 1;
+        box-shadow: 0px 0px 20px 10px #0000007c;
+    }
+
+}

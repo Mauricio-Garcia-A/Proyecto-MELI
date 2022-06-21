@@ -13,11 +13,11 @@ export default function BreadCrumbs(props){
      });
   
   return (
-    <>
+    <div className='contenedorBreadCrumb'>
         <ul className="breadcrumb">
             {breadcrumbs}
         </ul>
-    </>
+    </div>
   );
 };
 
