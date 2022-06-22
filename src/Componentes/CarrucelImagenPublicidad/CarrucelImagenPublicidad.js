@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import './CarrucelImagenHome.scss'
+import './CarrucelImagenPublicidad.scss'
 
 /* ---------------------------   Componente CARRUSELIMAGENESPRODUCTO -----------------------------------------
 Este muesta las imagenes de los productos de forma dinamica (CARRUSEL)
     - recibe por props un array con las URL de las IMAGENES 
     - opcional recibe props la funcionalidad mostrar las imagenes automaticamente cada sierto tiempo, mediate las props AUTOPLAY y TEMPORIZADOR  
 */    
-export default function CarrucelImagenHome({imagenes, autoPlay=false, temporizador='5000'  }) {  
+export default function CarrucelImagenPublicidad({imagenes, autoPlay=false, temporizador='5000'  }) {  
     const [selectedIndex, setSelectedIndex]= useState(0)
     const [selectedImagen, setSelectedImagen]=useState(imagenes[0])
     const [loaded, setLoaded]=useState(false)

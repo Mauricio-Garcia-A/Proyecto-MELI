@@ -1,41 +1,21 @@
 import React from 'react';
-import './Home.scss'
-import imag01 from '../../Imagenes/ImagenesCarruselHome/imag01.jpg'
-import imag02 from '../../Imagenes/ImagenesCarruselHome/imag02.jpg'
-import imag03 from '../../Imagenes/ImagenesCarruselHome/imag03.jpg'
-import imag04 from '../../Imagenes/ImagenesCarruselHome/imag04.jpg'
-import imag05 from '../../Imagenes/ImagenesCarruselHome/imag05.jpg'
-import imag06 from '../../Imagenes/ImagenesCarruselHome/imag06.jpg'
-import imag07 from '../../Imagenes/ImagenesCarruselHome/imag07.jpg'
-import imag08 from '../../Imagenes/ImagenesCarruselHome/imag08.jpg'
-import TDC from '../../Imagenes/ImagenesCarruselHome/TDC.jpg'
-import TDD from '../../Imagenes/ImagenesCarruselHome/TDD.jpg'
-import CST from '../../Imagenes/ImagenesCarruselHome/CST.jpg'
-import EFC from '../../Imagenes/ImagenesCarruselHome/EFC.jpg'
-
-import CarrucelImagenHome from '../../Componentes/CarrucelImagenHome/CarrucelImagenHome'
+import { useContenidoHome } from '../../Hooks/useContenidoHome';
+import CarrucelImagenPublicidad from '../../Componentes/CarrucelImagenPublicidad/CarrucelImagenPublicidad'
 import FormasDePagos from '../../Componentes/FormasDePagos/FormasDePagos';
-
-
-
-
+import './Home.scss'
 
 /* Vista HOME
-En el componente HOME solo se mostrara el mensaje de bienvenida
+El vista HOME no fue solicitada en el Challenge (proactividad). HOME es una componente extra se muestra un carrusel con publicidad, y las formas de pago.
 */
 export default function Home() {
+    const {FORMAS_DE_PAGOS, IMAGENES_PUBLICIDAD} = useContenidoHome()
 
-    const FORMAS_DE_PAGOS = [   {titulo:'Tarjenta de Credito', icono:'TDC', informacion:TDC},
-                                {titulo:'Tarjeta de Debito', icono:'TDD', informacion:TDD},
-                                {titulo:'Cuotas sin Tarjeta', icono:'CST', informacion:CST},
-                                {titulo:'Efectivo', icono:'Efc', informacion:EFC},
-                            ]
     return (
         <div >
-            <CarrucelImagenHome  imagenes={[imag01,imag02,imag03,imag04,imag05,imag06,imag07,imag08]} autoPlay={true} />
+            <CarrucelImagenPublicidad  imagenes={IMAGENES_PUBLICIDAD} autoPlay={true} />
             <div className="contenedorApp">
                 <div className='ContenedorTextoTituloHome'>
-                    <span > Bienvenidos a MeLi, el ecommerce lider en compras y ventas digitales </span>       
+                    <span className='TextoTituloHome'> ¡Bienvenidos a MeLi, el E-commerce Lider en Compras y Ventas Digitales! </span>       
                 </div>
                 <FormasDePagos FDP={FORMAS_DE_PAGOS}/>
             </div>
