@@ -34,7 +34,7 @@ export default function ResultadosDelaBusqueda() {
                           { products.map(producto => (
                             <Link key={producto.id}  to={`/items/${producto.id}`} className="estiloLink">  
                                   <VistaPreliminarProducto  Imagen={producto.picture} 
-                                                            Precio={producto.price.amount} 
+                                                            Precio={producto.price.decimal} 
                                                             Titulo={producto.title} 
                                                             Ciudad={producto.address} 
                                                             EnvioGratis={producto.free_shipping}

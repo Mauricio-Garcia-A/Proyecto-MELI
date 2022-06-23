@@ -1,14 +1,13 @@
-import React, { useState, Context } from 'react';
+import React, { useState } from 'react';
 
-const ProductosContext = React.createContext({ })
+const ProductosContext = React.createContext({})
 
 export function ProductosContextProvider({children}) {
-    const [productos, setProductos] = useState([])
+    const [products, setProducts] = useState([])
 
-    return  (   <Context.Provider value={{ productos, setProductos }}>
-                    {children}
-                </Context.Provider>
-            )
+    return  <ProductosContext.Provider value={{ products, setProducts }}>
+                {children}
+            </ProductosContext.Provider>     
 }
 
 export default ProductosContext;

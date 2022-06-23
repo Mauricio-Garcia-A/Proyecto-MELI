@@ -12,19 +12,17 @@ import PlaceholderDetalleDeProducto from '../../Componentes/ItemsLoading/Placeho
 
 export default function DetalleDelProducto() {
     useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
+        window.scrollTo(0, 0)                                                                                   // Scrollea al arriba de todo, al iniciar la pagina
+    }, [])
 
-    const {id} = useParams();
-    const {product, description, categories, price, pictures, loading} = useDetalleProducto({id})
-
+    const {id} = useParams();                                                                                   // Extraigo ID de la URL
+    const {product, description, categories, price, pictures, loading} = useDetalleProducto({id})               // Extraigo de la customHook useDetalleProducto los parametros necesarios
 
     return (
         <div className="contenedorApp">
             {loading 
                 ?<PlaceholderDetalleDeProducto 
-                    Titulo={product.title} 
-                    Precio={price}   
+                    productoID={id}  
                 />
                 :<>
                     <BreadCrumbs Categorias={categories} />
@@ -37,7 +35,6 @@ export default function DetalleDelProducto() {
                                             Descripcion={description}                 
                         />
                     </div>
-                    <br />
                 </>
             }
             

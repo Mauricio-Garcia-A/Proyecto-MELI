@@ -42,8 +42,47 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
 
-
 }
+.placeholderTextTitulo {
+    animation-name: opacidad;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.placeholderTitulo{
+    height: 15px;
+    border-radius: 6px;
+    background: rgb(131, 131, 131);
+    margin-bottom: 10px;
+
+    animation-name: opacidad;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.placeholderSubtitulo{
+    height: 9px;
+    border-radius: 6px;
+    background: rgb(131, 131, 131);
+    margin-bottom: 7px;
+    animation-name: opacidad;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+} 
+.placeholderPrecio{
+    height: 30px;
+    border-radius: 6px;
+    background: rgb(131, 131, 131);
+    margin-top: 23px;
+   
+    animation-name: opacidad;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+} 
+
+
 //---- Placeholder CARRUSEL PRODUCTO
 
 .PlaceholderCarrusel {
@@ -82,6 +121,8 @@
     margin: 10% 0px 10px 0px;
     display: flex;
     justify-content: center;
+    position: relative;
+    object-fit: cover;
 
 }
 .botonFlechaPlaceholder {
@@ -123,3 +164,17 @@
     margin-left: 10px;
 }
 
+.imagenPlaceholderDDP{
+    width: 100%;
+    height:100%;
+    margin: auto;
+    opacity: 0.2;
+    position: absolute;
+    object-fit: contain;
+    
+}
+.iconoImagenPlaceholderDDP{
+    margin-top: 5px;
+    fill: rgba(255, 255, 255, 0.701);
+
+}
