@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
+import useSEO from '../../Hooks/useSEO'    
 import VistaPreliminarProducto from '../../Componentes/VistaPreliminarProducto/VistaPreliminarProducto.js'
 import BreadCrumbs from '../../Componentes/BreadCrumbs/BreadCrumbs.js'
 import "./resultadosDelaBusqueda.scss"
@@ -11,7 +12,6 @@ import Slider from '../../Componentes/ItemsLoading/Slider/Spinner.js'
 /* -------------------------  Vista RESULTADOSDELABUSQUEDDA  -----------------------------
     La vista Resultado Muestra la lista de los resultados surgidos de la búsqueda
 */
-
 export default function ResultadosDelaBusqueda() {
   const [params] = useSearchParams()                                
   let keywords = params.get("search")                                                                                     // Recupero la palabra buscada de la url 
@@ -21,6 +21,10 @@ export default function ResultadosDelaBusqueda() {
     setPage(prevPage => prevPage + 1)
   }
 
+  const tituloSeoRDLB = loading ? 'Cargando...' : `${products.length} resultados de "${keywords}"`
+  const descripcionSeoRDLB = `Descripcion de los ${products.length} resultados de la busqueda de "${keywords}"`
+  useSEO({title: tituloSeoRDLB, description: descripcionSeoRDLB})
+  
   return (
     <div className="contenedorApp">
     { loading                                                                                                           // Si esta cargado muestra Placehoder y cuando termina de cargar muestra el Listado De Productos

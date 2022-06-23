@@ -2,13 +2,13 @@ import { useState, useEffect} from "react";
 import {getProductoSeleccionado, getDescripcionProducto, getCategorias } from "../SeviciosApi/getProductos";
 
 export function useDetalleProducto ({id}) {
-    const [loading, setLoadig] = useState(true)
+    const [loading, setLoadig] = useState(false)
     const [product, setProduct] = useState([])
     const [description, setDescription] = useState([])
     const [categories, setCategories] = useState([])
     const [price, setPrice ]= useState([])
     const [pictures, setPictures ]=useState([])
-    //const [error, setError] = useState(false)
+    const [error, setError] = useState(false)
 
     useEffect(function() {
         setLoadig(true)
@@ -28,12 +28,16 @@ export function useDetalleProducto ({id}) {
                 setCategories(categorias)  
             })
             setLoadig(false)
-        }) 
+            setError(false)
+        }).catch(err => {
+            setLoadig(false)
+            setError(true)
+        })
         getDescripcionProducto({id}).then(descripcion => {
             setDescription(descripcion)  
         })
     },[id])
 
     
-    return {loading, product, description, categories, price, pictures}
+    return {loading, product, description, categories, price, pictures, error}
 }
