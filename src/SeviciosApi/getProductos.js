@@ -144,3 +144,42 @@ export function getDescripcionProducto({id}) {
         })
         .catch(error => {console.log('Error Servicio al buscar la Descripcion del producto')})    
 }
+
+
+export function getProductosRecomendados({query, limit=4, page=0}) {
+    const API_URL_BUSCAR_PRODUCTOS_RECOMENDADOS=`${API_URL}/sites/MLA/search?q=${query}&limit=${limit}&offset=${limit*page}`
+
+    return fetch(API_URL_BUSCAR_PRODUCTOS_RECOMENDADOS)                                                                       // Se hace la llamada a la API
+        .then(response=>response.json())                                                                        // Se convierte la respuesta a JSON
+        .then(data => { 
+            const {results} = data                                                                         // De los datos de la respuesta extraigo solo los 'results' (array con los productos)
+            if (results.length !== 0) { 
+                const items = results.map(item => {
+                    const {id, title, currency_id, thumbnail, shipping} = item 
+                    const price = Intl.NumberFormat('es-AR', {style:'currency', currency:`${currency_id}`}).format(item.price)
+                    const picture = thumbnail
+                    const{free_shipping}=shipping
+                    const condition = item.condition === 'new' ? 'Nuevo' : 'Usado'
+                    return {
+                        id, 
+                        title, 
+                        price, 
+                        picture,
+                        condition,
+                        free_shipping,
+                    }                                                  
+                })
+                const ENDPOINT_PRODUCTOS = {author,items}
+                return ENDPOINT_PRODUCTOS               
+            } else { 
+                const items=[]
+                const ENDPOINT_ERROR = {author,items,}
+                return ENDPOINT_ERROR
+            }
+        })
+        .catch(error => {
+            const items=[]
+            const ENDPOINT_ERROR = {author,items}
+            return ENDPOINT_ERROR
+        })       
+}

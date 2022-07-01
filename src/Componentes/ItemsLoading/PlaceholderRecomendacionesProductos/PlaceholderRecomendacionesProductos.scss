@@ -1,0 +1,86 @@
+// Importacion Estilos Globales
+@import '../../../Estilos/variables.scss';
+.contenedorRecomendacionesProductosPH{
+    height: 430px;
+
+    animation-name: opacidadPH;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes opacidadPH {
+    from {opacity: 1;}
+    to {opacity: 0.3;}
+}
+
+.TextoTituloRPPH {
+    width: 40%;
+    height: 25px;
+    border-radius: 11px;
+    background: rgb(131, 131, 131);
+    margin-bottom: 10px;
+
+}
+
+.ItemProductoRecomendadoPH{
+    min-width: 220px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    height: auto;
+    padding: 1px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgba(207, 207, 207, 0.185);
+    box-shadow: 2px 4px 4px 1px rgba(143, 143, 143, 0.345);
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.imagenItemProductoRecomendadoPH{
+    border-radius: 5px 5px 0px 0px;
+    height: 216px;
+    border-bottom: 1px solid rgba(199, 199, 199, 0.537);
+    background: #a5a5a5;
+    display: flex;
+    object-fit: cover;
+}
+.textosItemProductoRecomendadoPH{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+.TextoEnvioGratisRPPH{
+    margin-top: 8px;
+    width: 80px;
+    height: 13px;
+    border-radius: 11px;
+    background: rgb(131, 131, 131);
+}
+.TextoPrecioRPPH{
+    width: 120px;
+    height: 25px;
+    border-radius: 11px;
+    background: rgb(131, 131, 131);
+}
+
+
+.contenedorItemsRPPH{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+       display: none;
+    }
+}
+
+.iconoImagenPlaceholderRP {
+    fill: rgba(255, 255, 255, 0.701);
+}
