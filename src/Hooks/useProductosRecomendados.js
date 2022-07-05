@@ -7,20 +7,28 @@ export function useProductosRecomendados() {
     const [productosOferta, setProductosOferta] = useState([])
     const [loadingOfertas, setLoadigOfertas] = useState(false)
     const [loadingPR, setLoadigPR] = useState(false)
-    const productosVistos = window.localStorage.getItem('productosBusqueda')
+    const [productosVistos, setProductosVistos] = useState(null)
+    
     
     useEffect(()=>{
-        setLoadigPR(true)
+        setLoadigOfertas(true)
         getProductosRecomendados({query:'ofertas', limit:4}).then(productos => {
             setProductosOferta(productos.items)
-            setLoadigPR(false)
+            setLoadigOfertas(false)
         })
-        if (productosVistos !== null){
-            setLoadigOfertas(true)
+
+        setLoadigPR(true)
+        setProductosVistos(window.localStorage.getItem('productosBusqueda'))
+
+        if (productosVistos === null){
+            setSeccionVisible(false)
+            setLoadigPR(false)
+        } else {
+            setLoadigPR(true)
+            setSeccionVisible(true)
             getProductosRecomendados({query:productosVistos, limit:4}).then(productos => {
                 setProductosRecomendados(productos.items)
-                setSeccionVisible(true)
-                setLoadigOfertas(false)
+                setLoadigPR(false)
             })            
         }
 

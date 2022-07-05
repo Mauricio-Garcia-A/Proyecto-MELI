@@ -17,7 +17,11 @@ export default function ResultadosDelaBusqueda() {
   let keywords = params.get("search")                                                                                     // Recupero la palabra buscada de la url 
   const {products, categories, loading, searchError, setPage, loadingNextPage}= useProductos({ keywords, limit:4})       // LLamada al sevicio (API) por medio de un customHook 
 
-  window.localStorage.setItem('productosBusqueda',keywords)                                                               // 
+  if (searchError) {                                                                                                     // Si la busqueda de productos tiene resultados, guardo las palabas buscadas en el LocalStorage
+    window.localStorage.removeItem('productosBusqueda')
+  } else {
+    window.localStorage.setItem('productosBusqueda',keywords)
+  }
 
   const handlerNextPage =()=> {
     setPage(prevPage => prevPage + 1)
